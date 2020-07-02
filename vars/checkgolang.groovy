@@ -8,7 +8,7 @@ def call() {
    sh 'golint \${WORKSPACE}/'
 
 // Run go vet 
-   sh 'go vet ./... || true'
+   sh 'go vet \${WORKSPACE}/' || true'
     }
 post {
     always {
