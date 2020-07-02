@@ -5,7 +5,7 @@ def call() {
    sh 'go get -u golang.org/x/lint/golint'
    
 // Run golint
-   sh 'golint ./...'
+   sh 'golint \${WORKSPACE}/'
 
 // Run go vet 
    sh 'go vet ./... || true'
