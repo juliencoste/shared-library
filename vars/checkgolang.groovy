@@ -1,14 +1,9 @@
 #!/usr/bin/env groovy
 
 def call() {
-// Retrieve golint tool
-   sh 'go get -u golang.org/x/lint/golint'
    
 // Run golint
-   sh 'golint \${WORKSPACE}/'
-
-// Run go vet 
-   sh 'go vet \${WORKSPACE}/ || true'
+   sh 'golangci-lint run \${WORKSPACE}/'
     }
 post {
     always {
