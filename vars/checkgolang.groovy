@@ -3,7 +3,7 @@
 def call() {
    
 // Run golint
-   sh 'golangci-lint run \${WORKSPACE}/'
+   sh 'golangci-lint run \${WORKSPACE}/...'
     }
 post {
     always {
