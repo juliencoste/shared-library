@@ -3,12 +3,12 @@
 def call() {
 // Retrieve golint tool
    sh 'go get -u golang.org/x/lint/golint'
-
+   
 // Run golint
-   sh 'cd $GOPATH/src/github/jbleduigou/budgetcategorizer && golint ./...'
+   sh 'golint ./...'
 
 // Run go vet 
-   sh 'cd $GOPATH/src/github/jbleduigou/budgetcategorizer && go vet ./... || true'
+   sh 'go vet ./... || true'
     }
 post {
     always {
