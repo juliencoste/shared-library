@@ -2,6 +2,6 @@
 
 // check javascript syntax
 def call(){
-    sh '/data cytopia/eslint \${WORKSPACE}/'
+    docker run -it --rm -v $(pwd):/data cytopia/eslint
 
 }
