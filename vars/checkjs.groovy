@@ -2,6 +2,6 @@
 
 // check javascript syntax
 def call(){
-    docker run -it --rm -v $(pwd):/data cytopia/eslint
+    docker run -it --rm -v $(pwd):/data cytopia/eslint .
 
 }
