@@ -2,6 +2,6 @@
 
 // check javascript syntax
 def call(){
-    sh '/data cytopia/eslint .
+    sh '/data cytopia/eslint .'
 
 }
