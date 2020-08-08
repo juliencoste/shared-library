@@ -2,6 +2,6 @@
 
 // check javascript syntax
 def call(){
-    step([$class: 'hudson.plugins.checkstyle.CheckStylePublisher', checkstyle: 'src/ahl.com/dockit/static/eslint.xml'])
+    docker run -it --rm -v $(workspace):/data cytopia/eslint .
 
 }
